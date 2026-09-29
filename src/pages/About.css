@@ -1,0 +1,40 @@
+.about-container {
+    text-align: center;
+    max-width: 800px;
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.about-content {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.about-content h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.offerings-list {
+    margin-top: 20px;
+}
+
+.offerings-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.offerings-list li:last-child {
+    border-bottom: none;
+}
+
+.offerings-list strong {
+    color: var(--text-dark);
+}

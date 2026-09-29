@@ -1,0 +1,25 @@
+.not-found-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found-container h1 {
+    font-size: 8rem;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.not-found-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.not-found-container p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}

@@ -1,0 +1,136 @@
+.course-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.course-detail-card {
+    background-color: var(--white);
+    padding: 50px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.course-icon-large {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.course-detail-card h1 {
+    margin-bottom: 10px;
+}
+
+.course-description {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.course-content {
+    text-align: left;
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: var(--radius);
+    margin-bottom: 40px;
+}
+
+.course-content h3 {
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.course-topics {
+    list-style: none;
+    padding: 0;
+}
+
+.course-topics li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+    color: var(--text-dark);
+}
+
+.course-topics li:last-child {
+    border-bottom: none;
+}
+
+.course-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.enrollment-form-container {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: var(--radius);
+    margin-top: 20px;
+    text-align: left;
+}
+
+.enrollment-form-container h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.enrollment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.enroll-success-message {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 1px solid #bbf7d0;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .course-detail-card {
+        padding: 30px 20px;
+    }
+
+    .course-actions {
+        flex-direction: column;
+    }
+
+    .course-actions .btn {
+        width: 100%;
+    }
+}
