@@ -1,6 +1,8 @@
 .navbar {
-    background-color: var(--white);
-    box-shadow: var(--shadow);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -14,57 +16,77 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    height: 70px;
+    height: 80px;
 }
 
 .navbar-logo {
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--white);
     text-decoration: none;
-    gap: 8px;
+    gap: 12px;
+    letter-spacing: -0.5px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
 }
 
 .navbar-icon {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));
 }
 
 .nav-menu {
     display: flex;
-    gap: 30px;
+    gap: 40px;
 }
 
 .nav-links {
-    color: var(--text-dark);
+    color: var(--text-light);
     font-weight: 500;
-    padding: 5px 0;
+    font-size: 1.05rem;
+    padding: 8px 0;
     position: relative;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .nav-links:hover {
-    color: var(--primary-color);
+    color: var(--white);
 }
 
 /* Active NavLink Style from React Router */
 .nav-links.active {
-    color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
 }
 
-.nav-links.active::after {
+.nav-links::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -2px;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 2px;
-    background-color: var(--primary-color);
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transition: width 0.3s ease;
+    border-radius: 2px;
+    box-shadow: var(--shadow-glow);
+}
+
+.nav-links:hover::after,
+.nav-links.active::after {
+    width: 100%;
 }
 
 @media (max-width: 768px) {
     .nav-menu {
-        gap: 15px;
+        gap: 20px;
+    }
+    .navbar-logo {
+        font-size: 1.4rem;
     }
 }

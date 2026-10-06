@@ -2,60 +2,79 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
+    position: relative;
 }
 
 .course-detail-card {
-    background-color: var(--white);
-    padding: 50px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    padding: 60px 50px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     max-width: 800px;
     width: 100%;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .course-icon-large {
-    font-size: 5rem;
-    margin-bottom: 20px;
+    font-size: 6rem;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
 }
 
 .course-detail-card h1 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .course-description {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--text-light);
     margin-bottom: 40px;
+    line-height: 1.8;
 }
 
 .course-content {
     text-align: left;
-    background-color: var(--bg-color);
-    padding: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px;
     border-radius: var(--radius);
     margin-bottom: 40px;
 }
 
 .course-content h3 {
-    color: var(--text-dark);
-    margin-bottom: 20px;
+    color: var(--white);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
 }
 
 .course-topics {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .course-topics li {
-    padding: 10px 0;
-    border-bottom: 1px solid #e5e7eb;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     color: var(--text-dark);
+    display: flex;
+    align-items: center;
 }
 
-.course-topics li:last-child {
-    border-bottom: none;
+.course-topics li::before {
+    content: '→';
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-weight: bold;
 }
 
 .course-actions {
@@ -65,23 +84,26 @@
 }
 
 .enrollment-form-container {
-    background-color: var(--bg-color);
-    padding: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px;
     border-radius: var(--radius);
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: left;
+    animation: fadeInUp 0.4s ease;
 }
 
 .enrollment-form-container h3 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
+    color: var(--white);
+    margin-bottom: 25px;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .enrollment-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .form-group {
@@ -90,40 +112,44 @@
 }
 
 .form-group label {
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-light);
     font-size: 0.95rem;
 }
 
 .form-group input {
-    padding: 10px 12px;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    color: var(--white);
     font-family: inherit;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .form-group input:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
 }
 
 .enroll-success-message {
-    background-color: #dcfce7;
-    color: #166534;
+    background: rgba(16, 185, 129, 0.1);
+    color: #34d399;
     padding: 20px;
     border-radius: var(--radius);
-    border: 1px solid #bbf7d0;
+    border: 1px solid rgba(16, 185, 129, 0.3);
     font-weight: 500;
     margin-top: 20px;
+    animation: fadeInUp 0.4s ease;
 }
 
 @media (max-width: 600px) {
     .course-detail-card {
-        padding: 30px 20px;
+        padding: 40px 20px;
     }
 
     .course-actions {

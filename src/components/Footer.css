@@ -1,9 +1,18 @@
 .footer {
-    background-color: var(--white);
-    padding: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--glass-border);
+    padding: 30px;
     text-align: center;
-    border-top: 1px solid #e5e7eb;
     color: var(--text-light);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    opacity: 0.8;
 }
